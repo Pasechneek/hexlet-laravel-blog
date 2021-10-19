@@ -18,5 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('about', function () {
-    return view('about');
+    $tags = ['обучение', 'программирование', 'php', 'oop'];
+    $team =[
+        ['name' => 'Danil Merkurev', 'position' => 'programmer'],
+        ['name' => 'Danil Merkurev', 'position' => 'QA tester'],
+    ];
+    return view('about', [ 'team' => $team ], ['tags' => $tags]);
+   // return view('about', );
+});
+
+
+
+Route::get('/articles', function () {
+    return view('articles');
 });
