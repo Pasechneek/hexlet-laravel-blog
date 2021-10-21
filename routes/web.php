@@ -20,8 +20,7 @@ Route::get('/', function () {
 Route::get('about', function () {
     $tags = ['обучение', 'программирование', 'php', 'oop'];
     $team =[
-        ['name' => 'Danil Merkurev', 'position' => 'programmer'],
-        ['name' => 'Danil Merkurev', 'position' => 'QA tester'],
+        ['name' => 'Danil Merkurev', 'position' => 'backend developer, manual tester']
     ];
     return view('about', [ 'team' => $team ], ['tags' => $tags]);
    // return view('about', );
