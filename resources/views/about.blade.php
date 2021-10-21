@@ -5,7 +5,7 @@
 
 <!-- Секция, содержащая HTML блок. Имеет открывающую и закрывающую часть. -->
 @section('content')
-    <p>Эксперименты с Laravel на Хекслете</p>
+    <p>Experiments with Laravel</p>
 
 <p>{{ implode(', ', $tags) }}</p>
 <h1>Developer:</h1>

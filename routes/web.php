@@ -18,15 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('about', function () {
-    $tags = ['обучение', 'программирование', 'php', 'oop'];
+    $tags = ['php', 'laravell', 'git'];
     $team =[
-        ['name' => 'Danil Merkurev', 'position' => 'backend developer, manual tester']
+        ['name' => 'Danil Merkurev', 'position' => 'backend developer']
     ];
     return view('about', [ 'team' => $team ], ['tags' => $tags]);
-   // return view('about', );
 });
-
-
 
 Route::get('/articles', function () {
     return view('articles');

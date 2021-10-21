@@ -7,3 +7,8 @@ help:
 
 cahe:
 	php artisan view:clear
+
+git:
+	git add .
+	git commit -m "add feature - "
+	git push
