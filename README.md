@@ -1,3 +1,58 @@
+Artisan,
+Tinker
+is required.
+
+after download:
+run composer install
+create .env.local file
+
+
+add and configure columns:
+
+DB_USERNAME=
+
+DB_PASSWORD=
+
+
+
+
+
+
+$a = new App\Models\Article();
+$a->id = 1;
+$a->timestamps = '18.12.2021';
+$a->save();
+
+$b = new App\Models\Article(); $b->id = 3; $b->save();
+
+найти запись
+
+$a = App\Models\Article::find(1);
+
+# Такой запрос извлечёт все статьи, у которых имя равно _another title_.
+>>> $articles = App\Models\Article::where('name', 'another title')->get()
+
+
+Model::all() извлекает все записи из таблицы. Такой метод подходит только в некоторых ситуациях, в основном при работе со справочниками где немного данных. В остальных случаях он может выбрать в память слишком много записей, что породит ненужную нагрузку на сервер.
+Model::paginate($page) – извлекает записи постранично. Основной метод, который используется в списках.
+
+И последнее, что можно сделать с сущностью, это удалить её:
+
+>>> $a->delete()
+> 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
